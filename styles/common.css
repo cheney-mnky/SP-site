@@ -1,0 +1,375 @@
+/*********************************The Common Css Of All Page In Site *************************************/
+ 
+
+* { 
+    box-sizing: initial;
+}
+
+html,
+body {
+height: 100%;
+margin: 0px;
+padding: 0px;
+width: 100%; 
+}
+
+body, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer.myFooter {
+    width: 100%;
+    position: absolute;
+    color: #dddddd;
+    bottom: 1.5%;
+    text-align: center;
+    font-size: 0.14rem; 
+}
+
+footer.myFooter a {
+    color: #dddddd;
+}
+
+footer.myFooter ul{
+	height:0.16rem;
+	line-height:0.16rem;	
+}
+
+footer.myFooter ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+footer.myFooter ul li {
+    display: inline-block;
+    list-style-type: none;  
+}
+
+footer.myFooter ul li ul {
+    vertical-align: middle;
+}
+
+footer.myFooter ul li ul li {
+    display: block;
+    vertical-align: middle;
+}
+
+footer.myFooter ul li ul li:nth-child(2) {
+    display: none;
+}
+
+footer.myFooter ul li ul:hover li {
+    display: block;
+}
+
+footer.myFooter img {
+    width: 0.45rem;
+    height: 0.3rem;
+    object-fit: fill;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    margin: 0;
+    padding-right: 1%;
+    padding-left: 1%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#header a {
+    color: rgba(11, 19, 47, 0.6);
+}
+
+/* PC client */
+@media screen and (min-width: 769px) {
+    section.mobile_header {
+        display: none;
+    }
+
+    #header {
+        /*position: fixed;*/
+        /*width: 1200px;*/
+        height: 15%;
+        line-height: 0.7rem;
+        padding: 0.02rem 0.4%;
+        font-size: 0.2rem;
+        box-sizing: initial;
+        margin: 0 auto;
+    }
+
+    section.pc_header {
+        max-width: 1920px;
+        max-height: 18%;
+        line-height: 0.7rem;
+        height: 0.7rem;
+        margin: 0;
+    }
+
+    section.pc_header ul {
+        width: 99%;
+        height: 0.7rem;
+        margin: 0;
+        display: inline-block;
+    }
+
+    section.pc_header section.logo_area {
+        max-width: 20%;
+        min-width: 20%;
+        line-height: 0.5rem;
+        height: 0.5rem;
+        float: left;
+        text-align: left;
+    }
+
+    section.pc_header section.logo_area img {
+        max-height: 100%;
+        position: relative;
+        line-height: 0.7rem;
+        vertical-align: middle;
+    }
+
+    section.pc_header nav.pc_nav {
+        max-width: 60%;
+        min-width: 60%;
+        float: left;
+        text-align: center;
+        height: 0.7rem;
+    }
+
+    section.pc_header section.index_login_area {
+        max-width: 20%;
+        min-width: 20%;
+        float: right;
+        text-align: right;
+        height: 0.5rem;
+    }
+
+    section.pc_header nav.pc_nav ul li {
+        position: relative;
+        list-style-type: none;
+        display: inline;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    section.pc_header section.index_login_area ul li {
+        list-style: none;
+        display: inline;
+        box-sizing: initial;
+        margin-left: 3%;
+    }
+
+    #main {
+        position: relative;
+        width: 98%;
+        height: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
+
+/* mobile client */
+@media screen and (max-width: 768px) {
+    section.pc_header {
+        display: none;
+    }
+
+    .notification_color {
+        background: rgba(47, 50, 56, .3);
+    }
+
+    #header {
+        height: 1.1rem;
+        box-sizing: initial;
+        padding-top: 0.02rem;
+        padding-bottom: 0.02rem;
+    }
+
+    section.mobile_header {
+        height: 1.7rem;
+        max-height: 22%;
+        max-width: 100%;
+    }
+
+    section.mobile_header section.chose_btn {
+        min-width: 2%;
+        max-width: 2%;
+        height: 0.2rem;
+        cursor: pointer;
+        float: left;
+        line-height: 0.2rem;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    section.mobile_header section.mobile_logo {
+        min-width: 37%;
+        max-width: 37%;
+        height: 1.1rem;
+        float: left;
+        text-align: center;
+    }
+
+    section.mobile_header section.mobile_logo img {
+        max-height: 64%;
+        vertical-align: middle;
+    }
+
+    section.mobile_header section.mobile_login_area {
+        min-width: 10%;
+        max-width: 10%;
+        text-align: center;
+        height: 0.6rem;
+        float: right;
+        line-height: 0.6rem;
+        margin-right: 1.6rem;
+        margin-top: 0.2rem;
+    }
+
+    section.mobile_login_area button {
+        text-align: center;
+        border-radius: 0.6rem;
+        background: none;
+        border: #fff solid 1px;
+        height: 0.5rem;
+        width: 2rem;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        vertical-align: middle;
+        line-height: 0.5rem;
+    }
+
+    section.notification {
+        position: fixed;
+        background: #222222;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+    }
+
+    section.notification section.notification_des {
+        width: 100%;
+        text-align: center;
+        top: 18%;
+        font-size: 0.2rem;
+        color: #545b62;
+        position: relative;
+    }
+
+    section.notification_des nav.mobile_nav ul li {
+        margin-top: 2%;
+    }
+
+    section.notification nav.mobile_nav a {
+        color: #545b62;
+        font-size: 0.22rem;
+    }
+
+    section.notification nav.mobile_nav a:hover {
+        color: #ffffff;
+    }
+
+    section.notification article.des {
+        font-size: 0.15rem;
+        color: #ffffff;
+        font-weight: normal;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 5%;
+    }
+
+    section.notification article.des p {
+        margin: 0;
+    }
+
+    div.x, div.z {
+        height: 0.05rem;
+        width: 0.5rem;
+        position: absolute;
+        margin: auto;
+        background: #fff;
+        display: inline;
+        border-radius: 0.03rem;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -ms-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        transition: all 200ms ease-out
+    }
+
+    div.x {
+        top: 0.26rem;
+    }
+
+    div.z {
+        top: 0.38rem;
+    }
+
+    div.collapse {
+        top: 0.33rem;
+        -webkit-transition: all 70ms ease-out;
+        -moz-transition: all 70ms ease-out;
+        -ms-transition: all 70ms ease-out;
+        -o-transition: all 70ms ease-out;
+        transition: all 70ms ease-out
+    }
+
+    div.rotate30 {
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -webkit-transition: all 50ms ease-out;
+        -moz-transition: all 50ms ease-out;
+        -ms-transition: all 50ms ease-out;
+        -o-transition: all 50ms ease-out;
+        transition: all 50ms ease-out
+    }
+
+    div.rotate150 {
+        -ms-transform: rotate(150deg);
+        -webkit-transform: rotate(150deg);
+        transform: rotate(150deg);
+        -webkit-transition: all 50ms ease-out;
+        -moz-transition: all 50ms ease-out;
+        -ms-transition: all 50ms ease-out;
+        -o-transition: all 50ms ease-out;
+        transition: all 50ms ease-out
+    }
+
+    div.rotate45 {
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: all 100ms ease-out;
+        -moz-transition: all 100ms ease-out;
+        -ms-transition: all 100ms ease-out;
+        -o-transition: all 100ms ease-out;
+        transition: all 100ms ease-out
+    }
+
+    div.rotate135 {
+        -ms-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        -webkit-transition: all 100ms ease-out;
+        -moz-transition: all 100ms ease-out;
+        -ms-transition: all 100ms ease-out;
+        -o-transition: all 100ms ease-out;
+        transition: all 100ms ease-out
+    }
+}

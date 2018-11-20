@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SeePixel,seepixel">
+    <title>惟望</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="../scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        (function (designWidth, maxWidth) {
+            var doc = document,
+                win = window,
+                docEl = doc.documentElement,
+                remStyle = document.createElement("style"),
+                tid;
+
+            function refreshRem() {
+                var width = docEl.getBoundingClientRect().width;
+                maxWidth = maxWidth || 540;
+                width > maxWidth && (width = maxWidth);
+                var rem = width * 100 / designWidth;
+                remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+            }
+
+            if (docEl.firstElementChild) {
+                docEl.firstElementChild.appendChild(remStyle);
+            } else {
+                var wrap = doc.createElement("div");
+                wrap.appendChild(remStyle);
+                doc.write(wrap.innerHTML);
+                wrap = null;
+            }
+            //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+            refreshRem();
+
+            win.addEventListener("resize", function () {
+                clearTimeout(tid); //防止执行两次
+                tid = setTimeout(refreshRem, 300);
+            }, false);
+
+            win.addEventListener("pageshow", function (e) {
+                if (e.persisted) { // 浏览器后退的时候重新计算
+                    clearTimeout(tid);
+                    tid = setTimeout(refreshRem, 300);
+                }
+            }, false);
+
+            if (doc.readyState === "complete") {
+                doc.body.style.fontSize = "16px";
+            } else {
+                doc.addEventListener("DOMContentLoaded", function (e) {
+                    doc.body.style.fontSize = "16px";
+                }, false);
+            }
+        })(750, 750);
+    </script>
+</head>
+<body>
+<!--header-->
+<header id="header" class="notification_color">
+    <!--******************PC header************************-->
+
+    <section class="pc_header">
+        <!--logo-->
+        <section class="logo_area">
+            <a href="../page/index/cn"><img src="../images/logo/white_logo.png" alt="惟望传媒"></a>
+        </section>
+        <!--nav-->
+        <nav class="pc_nav">
+            <ul>
+                <li><a href="/page/index/cn">我们</a></li>
+                <li><a href="/page/worth/cn">价值</a></li>
+                <li><a href="javascript:void(0)">服务</a></li>
+                <li><a href="javascript:void(0)">案例</a></li>
+                <li><a href="/page/contact/cn">联系</a></li>
+            </ul>
+        </nav>
+        <!--login area-->
+        <section class="index_login_area">
+            <button type="button">登录</button>
+        </section>
+    </section>
+
+    <!-- ********************mobile header***************** -->
+    <section class="mobile_header">
+        <!-- chose button -->
+        <section class="chose_btn">
+            <div class="x"></div>
+            <div class="z"></div>
+        </section>
+        <!-- middle logo -->
+        <section class="mobile_logo">
+            <img src="../images/logo/mobile_logo.png" alt="惟望">
+        </section>
+        <!-- index page login button -->
+        <section class="mobile_login_area">
+            <button type="button">登录</button>
+        </section>
+    </section>
+</header>
+<!--
+        when click the chose button, notification will
+        be open or close (be control by jQuery scripts).
+        -->
+<!--mobile notification default stats is hidden-->
+<section class="notification" style="display: none">
+    <section class="notification_des">
+        <nav class="mobile_nav">
+            <ul>
+                <li><a href="/page/index/cn">我们</a></li>
+                <li><a href="/page/worth/cn">价值</a></li>
+                <li><a href="javascript:void(0)">服务</a></li>
+                <li><a href="javascript:void(0)">案例</a></li>
+                <li><a href="/page/contact/cn">联系</a></li>
+            </ul>
+        </nav>
+    </section>
+    <article class="des">
+        <p>光影声 惟望像</p>
+        <p>All The Time,All SeePixel</p>
+    </article>
+</section>
+<script src="../scripts/notification.js"></script>
+
+<!-- 视频背景 -->
+<video autoplay loop muted id="myVideo" src="../media/index_video.mp4""
+       style=" position:fixed;min-height:
+    100%;min-width: 100%;z-index: -9;transform:translateX(-50%) translateY(-50%);left:50%;top:50%"></video>
+
+
+<img id="gifM" style="display:none;position:fixed;top:0;left:0;max-height: 100%;min-width: 100%;z-index: -9;transform:translateX(-50%) translateY(-50%);left:50%;top:50%;"
+    src="../images/background/gifm.gif" />
+
+<!--main-->
+<section id="main">
+    <!--index description-->
+    <article id="article_area1" class="index_description">
+        <p>CHALLENGE</p>
+        <p>EXCITING</p>
+        <a href="../create/stepZero">为您创作</a>
+    </article> 
+</section>
+
+<!--mobile index page footer-->
+<footer id="mobile_transaction_btn">
+    <button class="smallBtn">EN</button>
+    <button class="bigBtn">CN</button>
+    <script>
+        $(".smallBtn").on("click", function () {
+            window.location.href = "../page/index/en"
+        });
+    </script>
+</footer>
+
+<footer class="myFooter">
+    <section>
+        <ul>
+            <li> &copy; copyright 2018</li>
+            <li>·</li>
+            <li><a href="">粤ICP备18076119号-1</a></li>
+        </ul><br>
+        <ul> 
+            <li><a href="">隐私&法律</a></li>
+            <li>·</li>
+            <li><a href="">联系人信息</a></li>
+            <li>·</li>
+            <li><a href="">工作机会</a></li>
+            <li>·</li>
+            <li><a href="">订阅更新</a></li>
+            <li>·</li>
+            <li>
+                <ul>
+                    <li><a href="/page/index/cn"><img src="../images/logo/china.png" alt="中国"></a></li>
+                    <li><a href="/page/index/en"><img src="../images/logo/uk.png" alt="UK"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</footer>
+</body>
+</html>

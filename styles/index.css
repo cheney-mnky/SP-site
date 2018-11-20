@@ -1,0 +1,207 @@
+/***********************Index Page Css***********************************/
+/* common css*/
+video#myVideo {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    min-width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+section.carousel_area {
+    position: absolute;
+    bottom: 3rem;
+    width: 80%;
+    height: 3rem;
+    line-height: 3rem;
+    left: 10%;
+    text-align: center;
+}
+
+section.carousel_area ul {
+    margin: 0 auto;
+}
+
+section.carousel_area ul li {
+    cursor: pointer;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: #ffffff;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    list-style-type: none;
+    margin-right: 1rem;
+}
+
+#main article.index_description a {
+    cursor: pointer;
+    outline: none;
+    margin: 0.1rem;
+    display: block;
+    height: 0.5rem;
+    text-align: center;
+    width: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid #ffffff;
+    border-image: initial;
+}
+
+/* PC client*/
+@media screen and (min-width: 769px) {
+    #main article.index_description {
+        top: 35%;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+        padding-left: 2%;
+        font-size: 0.4rem;
+        height: 0.3rem;
+        
+    }
+#main article.index_description p {
+font-size: 0.5rem;
+font-weight: 0.6rem; 
+margin: 0px;
+margin-block-start: 0em;
+margin-block-end: 0em;
+display: block;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+}
+    #header a {
+        color: #cccccc;
+    }
+
+    #main {
+        padding: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+    }
+
+    #main article.index_description h1 {
+        font-size: 4.4rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    #main article.index_description h3 {
+        font-size: 2.3rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    footer#mobile_transaction_btn {
+        display: none;
+    }
+
+    section.pc_header section.index_login_area {
+        text-align: right;
+    }
+
+    section.pc_header section.index_login_area button {
+        text-align: center;
+        border-radius: 0.2rem;
+        background: none;
+        border: #fff solid 1px;
+        height: 0.4rem;
+        width: 1rem;
+        font-size: 0.2rem;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        vertical-align: middle;
+        line-height: 0.4rem;
+    }
+}
+
+/* mobile client*/
+@media screen and (max-width: 768px) {
+    footer#mobile_transaction_btn {
+        display: block;
+        position: absolute;
+        bottom: 1.15rem;
+        right: 0.2rem;
+        width: 0.35rem;
+        height: 1rem;
+        border-radius: 0.42rem;
+        background: rgba(51, 51, 51, 0.7);
+        border: 1px solid #000000;
+        z-index: 99;
+    }
+
+    #main {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: #ffffff;
+    }
+
+    footer#mobile_transaction_btn button {
+        background: #fff; 
+        border: none;
+        outline: none;
+        font-size: 0.2rem;
+        text-align: center;
+        padding: 0px;
+    }
+
+    footer#mobile_transaction_btn button.smallBtn {
+        width: 0.35rem;
+        height: 0.35rem;
+        opacity: .5;
+        border-radius: 0.35rem; 
+    }
+
+    footer#mobile_transaction_btn button.bigBtn {
+        width: 0.38rem;
+        height: 0.38rem;
+        border-radius: 0.38rem;
+        margin-left: -0.01rem;
+        opacity: 1;
+        margin-top: 0.28rem;
+    }
+
+    #main article.index_description {
+        top: 35%;
+        margin-left: 1%;
+        position: relative;
+        font-size: 0.5rem;
+    }
+
+    #main article.index_description h1 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: #000000;
+        margin: 0;
+    }
+
+    #main article.index_description h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #000000;
+        margin: 0;
+    }
+    footer.myFooter { 
+        background: #044a5f;
+        z-index: -1;
+    }
+
+}
